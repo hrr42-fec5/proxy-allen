@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
   <header>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
     <title>FEC Demo</title>
   </header>
   <body>
+    <div id="nav">
+      <div id="navleft">
+        <img src="assets/navleft.jpg">
+      </div>
+      <div id="navright">
+        <img src="assets/navright.jpg">
+      </div>
+    </div>
     <div id="app"></div>
     <div id="app2"></div>
     <div id="app3"></div>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3003/app.js"></script>
-    <script src="http://localhost:3005/bundle.js"></script>
+    <script src="app1.js"></script>
+    <script src="app2.js"></script>
+    <script src="app3.js"></script>
+    <script src="vendor.js"></script>
   </body>
 </html>
