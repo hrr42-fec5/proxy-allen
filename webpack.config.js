@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    vendor: ["styled-components"],
-    app1: "./service-allen/client/index.jsx",
-    app2: "./service-camryn/client/app.jsx",
-    app3: "./service-tom/client/index.jsx",
+    vendor: ['styled-components'],
+    app1: './service-allen/client/index.jsx',
+    app2: './service-camryn/client/app.jsx',
+    app3: './service-tom/client/index.jsx',
   },
   output: {
     filename: '[name].js',
@@ -27,7 +27,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      "styled-components": path.resolve("./node_modules", "styled-components"),
+      'styled-components': path.resolve('./node_modules', 'styled-components'),
     }
   },
   optimization: {
