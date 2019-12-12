@@ -1,9 +1,9 @@
 const express = require('express');
+require('dotenv').config();
 const parser = require('body-parser');
 const morgan = require('morgan');
-const path = require('path');
+const db = require('./db/index.js');
 const cors = require('cors');
-const proxy = require('http-proxy-middleware');
 
 const app = express();
 
@@ -14,10 +14,17 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-app.use(proxy('/api/images', {target: 'http://localhost:3001/' }));
-app.use(proxy('/api/articles', {target: 'http://localhost:3003/' }));
-app.use(proxy('/api/recommendations', {target: 'http://localhost:3005/' }));
+app.get('/api/images/:restaurantId', (req, res) => {
+  const id = parseInt(req.params.restaurantId);
+  db.get(id)
+    .then(entry => res.status(200).send(entry))
+    .catch(err => {
+      console.log(err);
+      res.status(404).end();
+    });
+});
 
-const port = process.env.PORT || 3000;
+
+const port = process.env.PORT || 3001;
 
 app.listen(port, console.log(`Server running on port: ${port}`));
