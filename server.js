@@ -14,6 +14,9 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
+//relative path routes
+//need to change each services server to these new apis
+//also make sure the get request of each service is relative
 app.use(proxy('/api/images', {target: 'http://localhost:3001/' }));
 app.use(proxy('/api/articles', {target: 'http://localhost:3003/' }));
 app.use(proxy('/api/recommendations', {target: 'http://localhost:3005/' }));
