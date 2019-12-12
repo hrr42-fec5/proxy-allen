@@ -8,7 +8,7 @@ module.exports = {
     app3: './service-tom/client/index.jsx',
   },
   output: {
-    filename: 'relativepath[name].js',
+    filename: '[name].js',
     path: __dirname + '/public'
   },
   module: {
