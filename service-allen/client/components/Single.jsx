@@ -7,7 +7,7 @@ import { KeyboardArrowLeft } from 'styled-icons/material/KeyboardArrowLeft';
 import { Animate } from 'react-simple-animate';
 
 const StyledContainer = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
