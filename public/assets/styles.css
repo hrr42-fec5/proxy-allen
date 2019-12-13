@@ -11,11 +11,37 @@ html, body {
   justify-content: space-between;
 }
 
-#app2 {
+#container {
   padding: 30px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "blurb info"
+    "articles info";
+
+
+}
+#app2 {
+  grid-area: articles;
+  justify-self: end;
+  background-color: #fff;
+  width: 923px;
+
+}
+
+#blurb {
+  grid-area: blurb;
+  justify-self: end;
+}
+
+#info {
+  grid-area: info;
+  justify-self: start;
+
 }
 
 #app3 {
   padding: 30px;
-  /* max-width: 1600px; */
+  width: 1400px;
+  margin: 0 auto;
 }
