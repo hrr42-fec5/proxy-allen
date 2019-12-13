@@ -18,15 +18,13 @@ html, body {
   grid-template-areas:
     "blurb info"
     "articles info";
-
-
 }
+
 #app2 {
   grid-area: articles;
   justify-self: end;
   background-color: #fff;
   width: 923px;
-
 }
 
 #blurb {
@@ -37,7 +35,6 @@ html, body {
 #info {
   grid-area: info;
   justify-self: start;
-
 }
 
 #app3 {
